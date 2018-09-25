@@ -18,14 +18,12 @@ Simply run, `yarn install`.
 OMDb API Keys
 -------
 
-In order to build a working application, you will need to provide a OMDb API key. This is provided via a gitignored config.js file in the project root, which should export an object containing at least the following:
+In order to build a working application, you will need to provide a OMDb API key. This is provided via a gitignored `.env` file in the project root (for session security purposes):
 
-##### ./config.js
+##### .env
 
-```js
-module.exports = {
-    omdbApiKey: '<your-omdb-api-key-here>'
-}
+```
+OMDB_API_KEY="your-secret-goes-here"
 ```
 
 License
