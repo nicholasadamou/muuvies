@@ -8,23 +8,25 @@ A simple UI for searching [OMDb.org](http://omdbapi.com)'s API.
 What is "Muuvies"?
 -------
 
-A web application used for searching [OMDb.org](http://omdbapi.com)'s API.
+A web application used for searching [themoviedb.org](https://www.themoviedb.org/)'s API.
 
 Install
 -------
 
 Simply run, `yarn install`.
 
-OMDb API Keys
+TMDb API Keys
 -------
 
-In order to build a working application, you will need to provide a OMDb API key. This is provided via a gitignored `.env` file in the project root (for session security purposes):
+In order to build a working application, you will need to provide a TMDb API key. This is provided via a gitignored `.env` file in the project root (for session security purposes):
 
 ##### .env
 
 ```
-OMDB_API_KEY="your-secret-goes-here"
+TMDB_API_KEY="your-secret-goes-here"
 ```
+
+To visit the TMDb API documentation use this [link](https://www.themoviedb.org/documentation/api).
 
 License
 -------
