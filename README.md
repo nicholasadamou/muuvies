@@ -10,6 +10,14 @@ What is "Muuvies"?
 
 A web application used for searching [themoviedb.org](https://www.themoviedb.org/)'s API.
 
+Features
+-------
+
+This project uses:
+
+* [Semantic-UI](https://react.semantic-ui.com/)
+* [themovie-db](https://www.themoviedb.org/)
+
 Install
 -------
 
