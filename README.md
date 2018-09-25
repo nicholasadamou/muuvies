@@ -36,6 +36,11 @@ TMDB_API_KEY="your-secret-goes-here"
 
 To visit the TMDb API documentation use this [link](https://www.themoviedb.org/documentation/api).
 
+Design
+-------
+
+To view the figma design, click [here](https://www.figma.com/file/NbJg775aItjxvZuC9NKaYJRy/Muuvies?node-id=0%3A1).
+
 License
 -------
 
