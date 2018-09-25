@@ -39,7 +39,7 @@ To visit the TMDb API documentation use this [link](https://www.themoviedb.org/d
 License
 -------
 
-Muuvies is © 2018
+Muuvies is © 2018, Nicholas Adamou, Brady Tobin, Nick O'keefe, Conor Borrows and Jordan Proby.
 
 It is free software, and may be redistributed under the terms specified in the [LICENSE] file.
 
