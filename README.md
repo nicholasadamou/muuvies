@@ -27,6 +27,7 @@ module.exports = {
     omdbApiKey: '<your-omdb-api-key-here>'
 }
 ```
+
 License
 -------
 
