@@ -28,8 +28,6 @@ module.exports = {
 }
 ```
 
-To visit the OMDb API documentation visit this [link](http://www.omdbapi.com/?i=tt3896198&apikey=df5a3a43).
-
 License
 -------
 
