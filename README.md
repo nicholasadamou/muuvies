@@ -1,6 +1,6 @@
 ## Muuvies
 
-A simple UI for searching [OMDb.org](http://omdbapi.com)'s API.
+A simple UI for searching [themoviedb.org](https://www.themoviedb.org/)'s API.
 
 ![license](https://img.shields.io/apm/l/vim-mode.svg)
 [![Say Thanks](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/NicholasAdamou)
