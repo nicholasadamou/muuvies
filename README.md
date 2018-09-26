@@ -39,7 +39,7 @@ yarn install # Installs dependencies
 
 ## Build & Running the Web App
 
-Simply run, `npm start`.
+Simply run, `yarn start`.
 
 ## Design
 
