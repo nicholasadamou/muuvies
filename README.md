@@ -13,7 +13,7 @@ A web application used for searching [omdbapi.com/](https://www.omdbapi.com/)'s 
 
 This project uses:
 
-* [OMDb-API](https://www.omdbapi.com/)
+* [omdb-api](https://www.omdbapi.com/)
 * [styled-components](https://www.styled-components.com/)
 
 ## ⚠️ Decrypting `_secrets`
