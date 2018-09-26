@@ -1,21 +1,33 @@
 {
   "name": "muuvies",
   "version": "0.0.0",
-  "description": "A simple UI for searching The Movie Database",
+  "description": "A simple UI for searching The Open Movie Database",
   "private": true,
   "dependencies": {
-    "dotenv": "^6.0.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.5",
-    "semantic-ui-css": "^2.4.0",
-    "semantic-ui-react": "^0.82.5",
     "styled-components": "^3.4.9"
+  },
+  "devDependencies": {
+    "crypto-json": "^2.0.0",
+    "envfile": "^2.3.0",
+    "husky": "^0.14.3",
+    "json": "^9.0.6",
+    "secure-env": "^1.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "post-merge": "yarn decrypt"
+    }
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "encrypt": "node ./_secrets/encrypt.js",
+    "decrypt": "node ./_secrets/decrypt.js"
   }
 }
