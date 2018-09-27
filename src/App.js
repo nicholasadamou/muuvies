@@ -4,13 +4,13 @@ import {
   Route,
 } from 'react-router-dom';
 
-import Home from './routes/Home.js';
+import Muuvies from './routes/Muuvies.js';
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <Route exact path="/" component={Home}/>
+        <Route exact path="/" component={Muuvies}/>
       </Router>
     );
   }
