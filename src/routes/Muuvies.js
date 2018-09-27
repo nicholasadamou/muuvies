@@ -9,9 +9,6 @@ import styled from 'styled-components';
 import { propOr } from 'ramda';
 
 import Search from '../components/Search.js';
-import Posters from '../components/Posters.js';
-
-import Results from '../routes/Results.js';
 
 import OMDb from '../OMDb/OMDb.json';
 
@@ -38,11 +35,6 @@ const Error = styled.p`
     font-size: 14px;
     font-family: Roboto sans-serif;
     color: red;
-`;
-
-const SearchIcon = styled.span`
-    font-size: 42px;
-    margin-bottom: -25px;
 `;
 
 const OMDB_API_KEY = OMDb.API_KEY;
@@ -87,7 +79,7 @@ class Muuvies extends Component {
         } else {
             return (
                 <Container>
-                    <SearchIcon role="img" aria-label="search">🔍</SearchIcon>
+                    <span role="img" aria-label="search" style={{ fontSize: 42 + 'px', marginBottom: -25 + 'px'}}>🔍</span>
                     <SearchWrapper>
                         <Search search={this.search} />
                         {

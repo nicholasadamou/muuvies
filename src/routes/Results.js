@@ -14,16 +14,12 @@ const Container = styled.div`
     }
 `;
 
-const Search = styled.span`
-    font-size: 42px;
-`;
-
 class Results extends Component {
     render() {
         return(
             <Container>
                 <Link to="/">
-                    <Search role="img" aria-label="search">🔍</Search>
+                    <span role="img" aria-label="search" style={{ fontSize: 42 + 'px'}}>🔍</span>
                 </Link>
                 <Posters movies={this.props.location.state.data} />
             </Container>
