@@ -2,13 +2,11 @@
 import React, { Component } from 'react';
 
 import {
-  Route,
   Link
 } from 'react-router-dom';
+
 import { map } from 'ramda';
 import styled from 'styled-components';
-
-import Movie from '../components/Movie.js';
 
 const Container = styled.div`
     margin: 0 auto;
@@ -33,7 +31,6 @@ class Posters extends Component {
     return (
       <Container>
         {map(poster, this.props.movies)}
-        <Route path="/movie/:id" component={Movie}/>
       </Container>
     )
   }

@@ -6,29 +6,42 @@ import { path } from 'ramda';
 const StyledForm = styled.form`
     display: flex;
     flex-direction: row;
+    width: 100%;
 `;
 
 const StyledSearch = styled.input`
     outline: none;
     border: none;
 
-    border-bottom: 1px solid #C1C1C1;
+    border-bottom: 2px solid #dadada;
 
     height: 50px;
-    width: 50vh;
+    width: 40vw;
     margin-top: 20px;
 
     font-size: 32px;
-    font-family: Roboto sans-serif;
-    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+    color: #dadada;
+
+    caret-color: black;
+
+    :focus {
+      border-bottom: 2px solid black;
+    }
+
+    ::placeholder {
+      font-size: 32px;
+      font-family: 'Roboto', sans-serif;
+      color: #dadada;
+    }
 `;
 
 class Search extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
-      searchText: '',
+      query: '',
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -41,16 +54,16 @@ class Search extends Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.search(this.state);
-    this.setState({ searchText: '' });
+    this.setState({ query: '' });
   }
 
   render () {
     return (
       <StyledForm onSubmit={this.handleSubmit}>
-        <StyledSearch id="searchText" type="text"
-            name="searchText"
+        <StyledSearch id="query" type="text"
+            name="query"
             placeholder="Search for Muuvies."
-            value={path(['state', 'searchText'], this)}
+            value={path(['state', 'query'], this)}
             onChange={this.handleChange}
             autoComplete="off"
             autoFocus={true}

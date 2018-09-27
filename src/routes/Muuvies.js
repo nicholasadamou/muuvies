@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
 
+import {
+    withRouter,
+    Redirect
+} from 'react-router-dom';
+
 import styled from 'styled-components';
 import { propOr } from 'ramda';
 
 import Search from '../components/Search.js';
 import Posters from '../components/Posters.js';
+
+import Results from '../routes/Results.js';
 
 import OMDb from '../OMDb/OMDb.json';
 
@@ -33,7 +40,7 @@ const Error = styled.p`
     color: red;
 `;
 
-const Logo = styled.span`
+const SearchIcon = styled.span`
     font-size: 42px;
     margin-bottom: -25px;
 `;
@@ -45,41 +52,54 @@ class Muuvies extends Component {
         super();
 
         this.state ={
-            movies: [],
+            data: [],
+            query: "",
             error: "",
-            searchedFor: "",
         };
 
         this.search = this.search.bind(this);
     }
 
-    search ({searchText}) {
-        fetch(`http://www.omdbapi.com/?apikey=${OMDB_API_KEY}&s=${searchText}&type=movie`)
-          .then(res => res.json())
-          .then(res => {
+    search({query}) {
+        fetch(`http://www.omdbapi.com/?apikey=${OMDB_API_KEY}&s=${query}&type=movie`)
+        .then(res => res.json())
+        .then(res => {
             return res;
-        }).then(json => this.setState({
-            searchedFor: searchText,
-            movies: propOr([], 'Search', json),
-            error: json.Error
-        })).catch(err => this.setState({
-              error: 'Error Occurred: Try Again',
-              movies: [],
-              searchedFor: ''
+        }).then(json => {
+          this.setState({
+              query: query.toLowerCase(),
+              data: propOr([], 'Search', json),
+              error: json.Error
+          }, () => {
+              if (!this.state.error && this.state.data.length > 0) this.props.history.push("/search?s=" + query.toLowerCase(), { data: this.state.data });
+          });
+        }).catch(err => this.setState({
+            error: 'Error Occurred: Try Again',
+            data: [],
+            query: ''
         }));
     }
 
+
     render() {
-      return (
-        <Container>
-            <Logo role="img" aria-label="search">🍿</Logo>
-            <SearchWrapper>
-                <Search search={this.search} />
-                {this.state.error ? <Error><span role="img" aria-label="error" style={{marginRight: 2 + 'px'}}>⚠️</span>{this.state.error}</Error> : null}
-            </SearchWrapper>
-        </Container>
-      );
+        if (!this.state.error && this.state.data.length > 0) {
+            return <Redirect to={{ pathname: '/search', state: { data: this.state.data } }} />;
+        } else {
+            return (
+                <Container>
+                    <SearchIcon role="img" aria-label="search">🔍</SearchIcon>
+                    <SearchWrapper>
+                        <Search search={this.search} />
+                        {
+                            this.state.error
+                            ? <Error><span role="img" aria-label="error" style={{marginRight: 2 + 'px'}}>⚠️</span>{this.state.error}</Error>
+                            : null
+                        }
+                    </SearchWrapper>
+                </Container>
+            );
+        }
     }
   }
 
-export default Muuvies;
+export default withRouter(Muuvies);
