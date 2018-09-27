@@ -18,7 +18,7 @@ const StyledSearch = styled.input`
     width: 50vh;
     margin-top: 20px;
 
-    font-size: 16px;
+    font-size: 32px;
     font-family: Roboto sans-serif;
     font-style: italic;
 `;

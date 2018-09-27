@@ -1,8 +1,14 @@
 
 import React, { Component } from 'react';
 
+import {
+  Route,
+  Link
+} from 'react-router-dom';
 import { map } from 'ramda';
 import styled from 'styled-components';
+
+import Movie from '../components/Movie.js';
 
 const Container = styled.div`
     margin: 0 auto;
@@ -18,13 +24,16 @@ class Posters extends Component {
   render() {
     const poster = movie => {
       return (
-        <StyledImage key={movie.imdbID} src={movie.Poster} alt={movie.Title} />
+        <Link to={{ pathname: 'movie/' + movie.imdbID }} key={movie.imdbID} >
+          <StyledImage key={movie.imdbID} src={movie.Poster} alt={movie.Title} />
+        </Link>
       )
     };
 
     return (
       <Container>
         {map(poster, this.props.movies)}
+        <Route path="/movie/:id" component={Movie}/>
       </Container>
     )
   }

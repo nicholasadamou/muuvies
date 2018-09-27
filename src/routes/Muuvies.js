@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
 import styled from 'styled-components';
 import { propOr } from 'ramda';
@@ -9,41 +8,34 @@ import Posters from '../components/Posters.js';
 
 import OMDb from '../OMDb/OMDb.json';
 
-const Header = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 20px;
-
-    a {
-        text-decoration: none;
-    }
-
-    a > span {
-        font-size: 42px;
-    }
-`;
-
 const Container = styled.div`
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+`;
+
+const SearchWrapper = styled.div`
+    display: flex;
+    position: relative;
     flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 20px;
 `;
 
 const Error = styled.p`
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+
     font-size: 14px;
     font-family: Roboto sans-serif;
     color: red;
 `;
 
-const Text = styled.p`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 85vh;
-
-    font-size: 24px;
-    font-family: Roboto sans-serif;
-    color: grey;
+const Logo = styled.span`
+    font-size: 42px;
+    margin-bottom: -25px;
 `;
 
 const OMDB_API_KEY = OMDb.API_KEY;
@@ -79,21 +71,13 @@ class Muuvies extends Component {
 
     render() {
       return (
-        <div>
-            <Header>
-                <Link to="/">
-                    <span role="img" aria-label="search">🍿</span>
-                </Link>
-                <Container>
-                    <Search search={this.search} />
-                    {this.state.error ? <Error><span role="img" aria-label="error" style={{marginRight: 2 + 'px'}}>⚠️</span>{this.state.error}</Error> : null}
-                </Container>
-            </Header>
-            {this.state.movies.length > 0
-                ? <Posters movies={this.state.movies} />
-                : <Text><span role="img" aria-label="search" style={{marginRight: 5 + 'px'}}>🔎</span>Nothing to show here.</Text>
-            }
-        </div>
+        <Container>
+            <Logo role="img" aria-label="search">🍿</Logo>
+            <SearchWrapper>
+                <Search search={this.search} />
+                {this.state.error ? <Error><span role="img" aria-label="error" style={{marginRight: 2 + 'px'}}>⚠️</span>{this.state.error}</Error> : null}
+            </SearchWrapper>
+        </Container>
       );
     }
   }
