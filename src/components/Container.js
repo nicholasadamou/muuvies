@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import {
     Link
 } from 'react-router-dom';
 
-import styled, { className } from 'styled-components';
+import styled from 'styled-components';
 
 const Search = styled(Link)`
     text-decoration: none;
