@@ -18,7 +18,7 @@ const Search = styled(Link)`
 const Container = (props) => {
     return(
         <div style={{margin: 25 + 'px'}}>
-            <Search to="/" class="search">
+            <Search to="/">
                 <span role="img" aria-label="search">🔍</span>
             </Search>
             {props.children}
