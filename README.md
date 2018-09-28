@@ -17,6 +17,7 @@ This project uses:
 
 * [omdb-api](https://www.omdbapi.com/)
 * [styled-components](https://www.styled-components.com/)
+* [react-router](https://github.com/ReactTraining/react-router)
 
 ## ⚠️ Decrypting `_secrets`
 
