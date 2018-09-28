@@ -10,7 +10,6 @@ import OMDb from '../OMDb/OMDb.json';
 
 const Container = styled.div`
     margin: 25px;
-    margin-left: 50px;
 
     #search {
         text-decoration: none;
