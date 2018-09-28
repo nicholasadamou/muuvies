@@ -1,5 +1,7 @@
 ## Muuvies
 
+![preview](previews/preview.gif)
+
 A simple UI for searching [omdbapi.com/](https://www.omdbapi.com/)'s API.
 
 ![license](https://img.shields.io/apm/l/vim-mode.svg)
