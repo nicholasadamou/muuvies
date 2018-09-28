@@ -8,7 +8,7 @@ import {
 import styled from 'styled-components';
 import { propOr } from 'ramda';
 
-import Search from '../components/Search.js';
+import SearchBox from '../components/SearchBox.js';
 
 import OMDb from '../OMDb/OMDb.json';
 
@@ -39,7 +39,7 @@ const Error = styled.p`
 
 const OMDB_API_KEY = OMDb.API_KEY;
 
-class Muuvies extends Component {
+class Search extends Component {
     constructor() {
         super();
 
@@ -79,9 +79,9 @@ class Muuvies extends Component {
         } else {
             return (
                 <Container>
-                    <span role="img" aria-label="search" style={{ fontSize: 42 + 'px', marginBottom: -25 + 'px'}}>🔍</span>
+                    <span role="img" aria-label="search" style={{ fontSize: 42 + 'px', marginBottom: -25 + 'px' }}>🔍</span>
                     <SearchWrapper>
-                        <Search search={this.search} />
+                        <SearchBox search={this.search} />
                         {
                             this.state.error
                             ? <Error><span role="img" aria-label="error" style={{marginRight: 2 + 'px'}}>⚠️</span>{this.state.error}</Error>
@@ -94,4 +94,4 @@ class Muuvies extends Component {
     }
   }
 
-export default withRouter(Muuvies);
+export default withRouter(Search);

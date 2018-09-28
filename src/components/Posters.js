@@ -22,7 +22,10 @@ class Posters extends Component {
   render() {
     const poster = movie => {
       return (
-        <Link to={{ pathname: 'movie/' + movie.imdbID }} key={movie.imdbID} >
+        <Link
+          to={{ pathname: 'movie/' + movie.imdbID, state: { movie: movie} }}
+          key={movie.imdbID}
+        >
           <StyledImage key={movie.imdbID} src={movie.Poster} alt={movie.Title} />
         </Link>
       )

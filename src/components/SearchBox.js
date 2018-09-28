@@ -36,7 +36,7 @@ const StyledSearch = styled.input`
     }
 `;
 
-class Search extends Component {
+class SearchBox extends Component {
   constructor(props) {
     super(props);
 
@@ -73,4 +73,4 @@ class Search extends Component {
   }
 }
 
-export default Search;
+export default SearchBox;
