@@ -40,7 +40,7 @@ The following snippet only needs to be ran once if dependencies are not installe
 yarn install # Installs dependencies
 ```
 
-## Build & Running the Web App
+## Building & Running the Web App
 
 Simply run, `yarn start`.
 
