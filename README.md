@@ -11,6 +11,8 @@ A simple UI for searching [omdbapi.com/](https://www.omdbapi.com/)'s API.
 
 A web application used for searching [omdbapi.com/](https://www.omdbapi.com/)'s API.
 
+⚠️ To access the demo of 'Muuvies' visit this link: [muuvies demo](https://muuvies.netlify.com/).
+
 ## Features
 
 This project uses:
@@ -30,7 +32,6 @@ yarn decrypt
 ⚠️ **Note**: _This requires `key.txt` to exist within the `./_secrets/` directory. To obtain `key.txt` contact `nicholasadamouemail@gmail.com`._
 
 To learn more, please read the [README.md](_secrets/README.md).
-
 
 ## Install Dependencies
 
