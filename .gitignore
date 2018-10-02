@@ -1,6 +1,3 @@
-_secrets/key.txt
-_secrets/*.json
-_secrets/.DS_Store
 .DS_Store
 *.log
 node_modules/
