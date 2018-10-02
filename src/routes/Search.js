@@ -66,7 +66,7 @@ class Search extends Component {
               if (!this.state.error && this.state.data.length > 0) this.props.history.push("/search?s=" + query.toLowerCase(), { data: this.state.data });
           });
         }).catch(err => this.setState({
-            error: 'Error Occurred: Try Again',
+            error: 'Error Occurred: Try Again.',
             data: [],
             query: ''
         }));
