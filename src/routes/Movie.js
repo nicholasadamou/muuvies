@@ -99,7 +99,7 @@ class Movie extends Component {
         };
     }
 
-    componentWillMount() {
+    componentDidMount() {
         const movie = this.props.location.state.movie;
 
         fetch(`http://www.omdbapi.com/?apikey=${OMDB_API_KEY}&i=${movie.imdbID}&type=movie`)
