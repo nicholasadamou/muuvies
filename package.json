@@ -11,24 +11,10 @@
     "react-scripts": "1.1.5",
     "styled-components": "^3.4.9"
   },
-  "devDependencies": {
-    "crypto-json": "^2.0.0",
-    "envfile": "^2.3.0",
-    "husky": "^0.14.3",
-    "json": "^9.0.6",
-    "secure-env": "^1.0.0"
-  },
-  "husky": {
-    "hooks": {
-      "post-merge": "yarn decrypt"
-    }
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "encrypt": "node ./_secrets/encrypt.js",
-    "decrypt": "node ./_secrets/decrypt.js"
+    "eject": "react-scripts eject"
   }
 }

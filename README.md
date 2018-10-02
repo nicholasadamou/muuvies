@@ -19,19 +19,6 @@ This project uses:
 * [styled-components](https://www.styled-components.com/)
 * [react-router](https://github.com/ReactTraining/react-router)
 
-## ⚠️ Decrypting `_secrets`
-
-To make sure the `Muuvies` repository has been decrypted, run the following:
-
-```bash
-yarn decrypt
-```
-
-⚠️ **Note**: _This requires `key.txt` to exist within the `./_secrets/` directory. To obtain `key.txt` contact `nicholasadamouemail@gmail.com`._
-
-To learn more, please read the [README.md](_secrets/README.md).
-
-
 ## Install Dependencies
 
 The following snippet only needs to be ran once if dependencies are not installed:
