@@ -4,7 +4,7 @@
   "description": "A simple UI for searching The Open Movie Database",
   "private": true,
   "dependencies": {
-    "ramda": "^0.25.0",
+    "ramda": "^0.26.1",
     "react": "^16.5.2",
     "react-dom": "^16.6.1",
     "react-router-dom": "^4.3.1",
