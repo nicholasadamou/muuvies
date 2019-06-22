@@ -25,6 +25,12 @@ const StyledSearch = styled.input`
 
     caret-color: black;
 
+		@media (max-width: 375px) {
+			width: 100%;
+
+			font-size: 24px;
+		}
+
     :focus {
       border-bottom: 2px solid black;
     }
@@ -33,6 +39,10 @@ const StyledSearch = styled.input`
       font-size: 32px;
       font-family: 'Roboto', sans-serif;
       color: #dadada;
+
+			@media (max-width: 375px) {
+				font-size: 24px;
+			}
     }
 `;
 
@@ -46,13 +56,15 @@ class SearchBox extends Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-  }
+	}
+
   handleChange(e) {
     this.setState({[e.target.name]: e.target.value});
   }
 
   handleSubmit(e) {
-    e.preventDefault();
+		e.preventDefault();
+
     this.props.search(this.state);
     this.setState({ query: '' });
   }
@@ -60,7 +72,9 @@ class SearchBox extends Component {
   render () {
     return (
       <StyledForm onSubmit={this.handleSubmit}>
-        <StyledSearch id="query" type="text"
+				<StyledSearch
+						id="query"
+						type="text"
             name="query"
             placeholder="Search for Muuvies."
             value={path(['state', 'query'], this)}

@@ -17,6 +17,21 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     height: 90vh;
+
+	@media (max-width: 375px) {
+		height: 100vh;
+		padding: 0 20px;
+	}
+
+	span {
+		font-size: 42px;
+		margin-bottom: -25px;
+
+		@media (max-width: 375px) {
+			font-size: 32px;
+			margin-bottom: -45px;
+		}
+	}
 `;
 
 const SearchWrapper = styled.div`
@@ -25,6 +40,10 @@ const SearchWrapper = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     margin-left: 20px;
+
+	span {
+		margin-right: 2px;
+	}
 `;
 
 const Error = styled.p`
@@ -79,12 +98,15 @@ class Search extends Component {
         } else {
             return (
                 <Container>
-                    <span role="img" aria-label="search" style={{ fontSize: 42 + 'px', marginBottom: -25 + 'px' }}>🔍</span>
+                    <span role="img" aria-label="search">🔍</span>
                     <SearchWrapper>
                         <SearchBox search={this.search} />
                         {
                             this.state.error
-                            ? <Error><span role="img" aria-label="error" style={{marginRight: 2 + 'px'}}>⚠️</span>{this.state.error}</Error>
+                            ? <Error>
+								<span role="img" aria-label="error">⚠️</span>
+								{this.state.error}
+							  </Error>
                             : null
                         }
                     </SearchWrapper>

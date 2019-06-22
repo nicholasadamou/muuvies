@@ -19,21 +19,23 @@ A web application used for searching [omdbapi.com/](https://www.omdbapi.com/)'s 
 
 This project uses:
 
-* [omdb-api](https://www.omdbapi.com/)
-* [styled-components](https://www.styled-components.com/)
-* [react-router](https://github.com/ReactTraining/react-router)
+- [omdb-api](https://www.omdbapi.com/)
+- [styled-components](https://www.styled-components.com/)
+- [react-router](https://github.com/ReactTraining/react-router)
 
-## ⚠️ Decrypting `_secrets`
+# OMDb API Key
 
-To make sure the `Muuvies` repository has been decrypted, run the following:
+In order for this project to correctly build, you must have an OMDB API key placed in a file called _OMDb.json_:
 
-```bash
-yarn decrypt
+```json
+// ./src/OMDb/OMDb.json
+
+{
+  "API_KEY": "<key-goes-here>"
+}
 ```
 
-⚠️ **Note**: _This requires `key.txt` to exist within the `./_secrets/` directory. To obtain `key.txt` contact `nicholasadamouemail@gmail.com`._
-
-To learn more, please read the [README.md](_secrets/README.md).
+To obtain an API key, please visit [OMDb API Key](http://www.omdbapi.com/apikey.aspx) and fill out the form.
 
 ## Install Dependencies
 
@@ -53,8 +55,8 @@ To view the figma design, click [here](https://www.figma.com/file/NbJg775aItjxvZ
 
 ## License
 
-Muuvies is © 2018, Nicholas Adamou, Brady Tobin, Nick O'keefe, Conor Borrows and Jordan Proby.
+Muuvies is © 2018, Nicholas Adamou.
 
 It is free software, and may be redistributed under the terms specified in the [LICENSE] file.
 
-[LICENSE]: LICENSE
+[license]: LICENSE

@@ -16,6 +16,10 @@ const MovieWrapper = styled.div`
 
     font-family: 'Roboto', sans-serif;
 
+	@media (max-width: 375px) {
+		flex-direction: column;
+	}
+
     h1, h2 {
         margin: 18px 0;
 
@@ -33,6 +37,10 @@ const DetailsWrapper = styled.div`
     flex-direction: column;
     margin-left: 25px;
 
+	@media (max-width: 375px) {
+		margin: 0;
+	}
+
     .imdb-link {
         color: black;
     }
@@ -40,16 +48,32 @@ const DetailsWrapper = styled.div`
 
 const Poster = styled.img`
     width: 25%;
+
+	@media (max-width: 375px) {
+		width: 100%;
+	}
 `;
 
 const TitleWrapper = styled.div`
     display: flex;
     flex-direction: row;
 
+	@media (max-width: 375px) {
+		align-items: center;
+
+		margin: 15px 0;
+	}
+
     .title {
         margin-bottom: 10px;
 
         font-size: 32px;
+
+		@media (max-width: 375px) {
+			margin: 0;
+
+			font-size: 24px;
+		}
     }
 
     .year {
@@ -57,11 +81,19 @@ const TitleWrapper = styled.div`
         color: #BBBBBB;
         font-size: 32px;
         font-weight: 300;
+
+		@media (max-width: 375px) {
+			font-size: 18px;
+		}
     }
 `;
 
 const MetaWrapper = styled.div`
     color: #BBB;
+
+	@media (max-width: 375px) {
+		margin-top: 5px;
+	}
 
     .seperator {
         position: relative;
@@ -70,16 +102,24 @@ const MetaWrapper = styled.div`
         margin: 0 5px;
 
         font-size: 12px;
-    }
+	}
 `;
 
 const Overview = styled.p`
     font-size: 24px;
+
+	@media (max-width: 375px) {
+		margin: 10px 0;
+	}
 `;
 
 const Plot = styled.p`
     width: 45%;
     line-height: 2;
+
+	@media (max-width: 375px) {
+		width: 100%;
+	}
 `;
 
 const List = styled.p`
@@ -127,25 +167,25 @@ class Movie extends Component {
                     <Poster key={movie.imdbID} src={movie.Poster} alt={movie.Title} />
                     <DetailsWrapper id="details-wrapper">
                         <TitleWrapper>
-                            <a href={'https://www.imdb.com/title/' + movie.imdbID + '/'} class="imdb-link" target="_blank">
-                                <h1 class="title">
+                            <a href={'https://www.imdb.com/title/' + movie.imdbID + '/'} className="imdb-link" target="_blank" rel="noopener noreferrer">
+                                <h1 className="title">
                                     {movie.Title}
                                 </h1>
                             </a>
-                            <span class="year"> ({movie.Year})</span>
+                            <span className="year"> ({movie.Year})</span>
                         </TitleWrapper>
                         <MetaWrapper>
                             <span role="img" aria-label="popcorn">🍿</span>
-                                <span class="seperator">|</span>
-                                <span class="rated">{movieMeta.Rated}</span>
-                                <span class="seperator">|</span>
-                                <span class="Runtime">{movieMeta.Runtime}</span>
-                                <span class="seperator">|</span>
-                                <span class="Genre">{movieMeta.Genre}</span>
-                                <span class="seperator">|</span>
-                                <span class="Boxoffice">{movieMeta.BoxOffice}</span>
-                                <span class="seperator">|</span>
-                                <span class="Released">{movieMeta.Released} ({movieMeta.Country})</span>
+                                <span className="seperator">|</span>
+                                <span className="rated">{movieMeta.Rated}</span>
+                                <span className="seperator">|</span>
+                                <span className="Runtime">{movieMeta.Runtime}</span>
+                                <span className="seperator">|</span>
+                                <span className="Genre">{movieMeta.Genre}</span>
+                                <span className="seperator">|</span>
+                                <span className="Boxoffice">{movieMeta.BoxOffice}</span>
+                                <span className="seperator">|</span>
+                                <span className="Released">{movieMeta.Released} ({movieMeta.Country})</span>
                             </MetaWrapper>
                         <Overview>
                             Overview
@@ -157,14 +197,14 @@ class Movie extends Component {
                         <List>
                             <span>
                                 <span role="img" aria-label="star">🌟</span>
-                                <a href={'https://www.imdb.com/title/' + movie.imdbID + '/criticreviews?ref_=tt_ov_rt'} target="_blank">Metascore</a>
+                                <a href={'https://www.imdb.com/title/' + movie.imdbID + '/criticreviews?ref_=tt_ov_rt'} target="_blank" rel="noopener noreferrer">Metascore</a>
                                 :
                             </span> {movieMeta.Metascore}/100
                         </List>
                         <List>
                             <span>
                                 <span role="img" aria-label="star">🌟</span>
-                                <a href={'https://www.imdb.com/title/' + movie.imdbID + '/ratings?ref_=tt_ov_rt'} target="_blank">IMDb Rating</a>
+                                <a href={'https://www.imdb.com/title/' + movie.imdbID + '/ratings?ref_=tt_ov_rt'} target="_blank" rel="noopener noreferrer">IMDb Rating</a>
                                 :
                             </span> {movieMeta.imdbRating}/100 with {movieMeta.imdbVotes} votes
                         </List>
