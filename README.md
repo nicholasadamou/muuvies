@@ -23,6 +23,7 @@ This project uses:
 - [styled-components](https://www.styled-components.com/)
 - [react-router](https://github.com/ReactTraining/react-router)
 
+<<<<<<< HEAD
 # OMDb API Key
 
 In order for this project to correctly build, you must have an OMDB API key placed in a file called _OMDb.json_:
@@ -37,6 +38,8 @@ In order for this project to correctly build, you must have an OMDB API key plac
 
 To obtain an API key, please visit [OMDb API Key](http://www.omdbapi.com/apikey.aspx) and fill out the form.
 
+=======
+>>>>>>> cf427e4dbab0b37862f9876eb6c54898b02c0f55
 ## Install Dependencies
 
 The following snippet only needs to be ran once if dependencies are not installed:
