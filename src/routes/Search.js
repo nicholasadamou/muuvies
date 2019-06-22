@@ -54,6 +54,12 @@ const Error = styled.p`
     font-size: 14px;
     font-family: Roboto sans-serif;
     color: red;
+
+	@media (max-width: 375px) {
+		span {
+			font-size: 16px;
+		}
+	}
 `;
 
 const OMDB_API_KEY = OMDb.API_KEY;
