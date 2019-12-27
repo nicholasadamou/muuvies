@@ -822,3 +822,5 @@ patch:
         patched: '2019-12-09T00:06:58.341Z'
     - react-scripts > jest > jest-cli > @jest/core > @jest/reporters > jest-runtime > jest-config > @jest/test-sequencer > jest-runner > jest-jasmine2 > @jest/environment > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
         patched: '2019-12-09T00:06:58.341Z'
+    - snyk > snyk-nuget-plugin > dotnet-deps-parser > lodash:
+        patched: '2019-12-26T21:24:43.735Z'
