@@ -10,7 +10,7 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.1",
     "styled-components": "^4.4.1",
-    "snyk": "^1.288.0"
+    "snyk": "^1.290.1"
   },
   "scripts": {
     "start": "react-scripts start",
