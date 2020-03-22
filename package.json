@@ -4,20 +4,19 @@
   "description": "A simple UI for searching The Open Movie Database",
   "private": true,
   "dependencies": {
-    "ramda": "^0.27.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.10.1",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.0",
-    "styled-components": "^4.4.1",
-    "snyk": "^1.300.0"
+    "ramda": "0.27.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-router-dom": "5.1.2",
+    "react-scripts": "3.4.1",
+    "styled-components": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "clean": "rm -rf node-modules/ yarn.lock package-lock.json",
     "update": "npx yarn-check -u",
-    "test": "echo \"Error: no test specified\" && exit 0",
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
   "browserslist": {
     "production": [
