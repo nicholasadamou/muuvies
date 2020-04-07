@@ -28,8 +28,6 @@ This project uses:
 In order for this project to correctly build, you must have an OMDB API key placed in a file called _OMDb.json_:
 
 ```json
-// ./src/OMDb/OMDb.json
-
 {
   "API_KEY": "<key-goes-here>"
 }
