@@ -25,12 +25,10 @@ This project uses:
 
 # OMDb API Key
 
-In order for this project to correctly build, you must have an OMDB API key placed in a file called _OMDb.json_:
+In order for this project to correctly build, you must have an OMDB API key placed in a file called _.env_:
 
-```json
-{
-  "API_KEY": "<key-goes-here>"
-}
+```text
+REACT_APP_OMBD_API_KEY=<key-goes-here>
 ```
 
 To obtain an API key, please visit [OMDb API Key](http://www.omdbapi.com/apikey.aspx) and fill out the form.
@@ -53,7 +51,7 @@ To view the figma design, click [here](https://www.figma.com/file/NbJg775aItjxvZ
 
 ## License
 
-Muuvies is © 2018, Nicholas Adamou.
+Muuvies is © 2020, Nicholas Adamou.
 
 It is free software, and may be redistributed under the terms specified in the [LICENSE] file.
 

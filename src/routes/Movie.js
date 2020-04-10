@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 
 import styled from 'styled-components';
 
-import OMDb from '../OMDb/OMDb.json';
-
 import Container from '../components/Container.js';
 
 const MovieWrapper = styled.div`
@@ -128,21 +126,19 @@ const List = styled.p`
     }
 `;
 
-const OMDB_API_KEY = OMDb.API_KEY;
-
 class Movie extends Component {
     constructor() {
         super();
 
         this.state = {
-            data: [],
+			data: []
         };
     }
 
     componentDidMount() {
         const movie = this.props.location.state.movie;
 
-        fetch(`http://www.omdbapi.com/?apikey=${OMDB_API_KEY}&i=${movie.imdbID}&type=movie`)
+        fetch(`https://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_API_KEY}&i=${movie.imdbID}&type=movie`)
             .then(res => res.json())
             .then(res => {
                 return res;

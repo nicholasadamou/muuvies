@@ -10,8 +10,6 @@ import { propOr } from 'ramda';
 
 import SearchBox from '../components/SearchBox.js';
 
-import OMDb from '../OMDb/OMDb.json';
-
 const Container = styled.div`
     display: flex;
     justify-content: center;
@@ -43,6 +41,7 @@ const SearchWrapper = styled.div`
 
 	span {
 		margin-right: 2px;
+		font-size: 20px;
 	}
 `;
 
@@ -62,8 +61,6 @@ const Error = styled.p`
 	}
 `;
 
-const OMDB_API_KEY = OMDb.API_KEY;
-
 class Search extends Component {
     constructor() {
         super();
@@ -78,18 +75,18 @@ class Search extends Component {
     }
 
     search({query}) {
-        fetch(`http://www.omdbapi.com/?apikey=${OMDB_API_KEY}&s=${query}&type=movie`)
+        fetch(`https://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_API_KEY}&s=${query}&type=movie`)
         .then(res => res.json())
         .then(res => {
             return res;
         }).then(json => {
-          this.setState({
-              query: query.toLowerCase(),
-              data: propOr([], 'Search', json),
-              error: json.Error
-          }, () => {
-              if (!this.state.error && this.state.data.length > 0) this.props.history.push("/search?s=" + query.toLowerCase(), { data: this.state.data });
-          });
+			this.setState({
+				query: query.toLowerCase(),
+				data: propOr([], 'Search', json),
+				error: json.Error
+			}, () => {
+				if (!this.state.error && this.state.data.length > 0) this.props.history.push("/search?s=" + query.toLowerCase(), { data: this.state.data });
+			});
         }).catch(err => this.setState({
             error: 'Error Occurred: Try Again.',
             data: [],
@@ -109,11 +106,12 @@ class Search extends Component {
                         <SearchBox search={this.search} />
                         {
                             this.state.error
-                            ? <Error>
-								<span role="img" aria-label="error">⚠️</span>
-								{this.state.error}
-							  </Error>
-                            : null
+							?
+								<Error>
+									<span role="img" aria-label="error">⚠️</span>
+									{this.state.error}
+								</Error>
+							: null
                         }
                     </SearchWrapper>
                 </Container>
