@@ -16,7 +16,7 @@ const Container = styled.div`
     align-items: center;
     height: 90vh;
 
-	@media (max-width: 375px) {
+	@media (max-width: 500px) {
 		height: 100vh;
 		padding: 0 20px;
 	}
@@ -25,7 +25,7 @@ const Container = styled.div`
 		font-size: 42px;
 		margin-bottom: -25px;
 
-		@media (max-width: 375px) {
+		@media (max-width: 500px) {
 			font-size: 32px;
 			margin-bottom: -45px;
 		}
@@ -54,7 +54,7 @@ const Error = styled.p`
     font-family: Roboto sans-serif;
     color: red;
 
-	@media (max-width: 375px) {
+	@media (max-width: 500px) {
 		span {
 			font-size: 16px;
 		}

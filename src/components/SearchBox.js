@@ -6,14 +6,15 @@ import { path } from 'ramda';
 const StyledForm = styled.form`
     display: flex;
     flex-direction: row;
-    width: 100%;
+		width: 100%;
 `;
 
 const StyledSearch = styled.input`
     outline: none;
     border: none;
 
-    border-bottom: 2px solid #dadada;
+		border-bottom: 2px solid #dadada;
+		border-radius: none;
 
     height: 50px;
     width: 40vw;
@@ -23,11 +24,10 @@ const StyledSearch = styled.input`
     font-family: 'Roboto', sans-serif;
     color: #dadada;
 
-    caret-color: black;
+		caret-color: black;
 
-		@media (max-width: 375px) {
+		@media (max-width: 500px) {
 			width: 100%;
-
 			font-size: 24px;
 		}
 
@@ -40,7 +40,7 @@ const StyledSearch = styled.input`
       font-family: 'Roboto', sans-serif;
       color: #dadada;
 
-			@media (max-width: 375px) {
+			@media (max-width: 500px) {
 				font-size: 24px;
 			}
     }

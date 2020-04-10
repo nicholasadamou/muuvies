@@ -14,7 +14,7 @@ const MovieWrapper = styled.div`
 
     font-family: 'Roboto', sans-serif;
 
-	@media (max-width: 375px) {
+	@media (max-width: 500px) {
 		flex-direction: column;
 	}
 
@@ -35,7 +35,7 @@ const DetailsWrapper = styled.div`
     flex-direction: column;
     margin-left: 25px;
 
-	@media (max-width: 375px) {
+	@media (max-width: 500px) {
 		margin: 0;
 	}
 
@@ -47,7 +47,7 @@ const DetailsWrapper = styled.div`
 const Poster = styled.img`
     width: 25%;
 
-	@media (max-width: 375px) {
+	@media (max-width: 500px) {
 		width: 100%;
 	}
 `;
@@ -56,7 +56,7 @@ const TitleWrapper = styled.div`
     display: flex;
     flex-direction: row;
 
-	@media (max-width: 375px) {
+	@media (max-width: 500px) {
 		align-items: center;
 
 		margin: 15px 0;
@@ -67,7 +67,7 @@ const TitleWrapper = styled.div`
 
         font-size: 32px;
 
-		@media (max-width: 375px) {
+		@media (max-width: 500px) {
 			margin: 0;
 
 			font-size: 24px;
@@ -80,7 +80,7 @@ const TitleWrapper = styled.div`
         font-size: 32px;
         font-weight: 300;
 
-		@media (max-width: 375px) {
+		@media (max-width: 500px) {
 			font-size: 18px;
 		}
     }
@@ -89,7 +89,7 @@ const TitleWrapper = styled.div`
 const MetaWrapper = styled.div`
     color: #BBB;
 
-	@media (max-width: 375px) {
+	@media (max-width: 500px) {
 		margin-top: 5px;
 	}
 
@@ -106,7 +106,7 @@ const MetaWrapper = styled.div`
 const Overview = styled.p`
     font-size: 24px;
 
-	@media (max-width: 375px) {
+	@media (max-width: 500px) {
 		margin: 10px 0;
 	}
 `;
@@ -115,7 +115,7 @@ const Plot = styled.p`
     width: 45%;
     line-height: 2;
 
-	@media (max-width: 375px) {
+	@media (max-width: 500px) {
 		width: 100%;
 	}
 `;
