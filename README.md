@@ -51,7 +51,7 @@ To view the figma design, click [here](https://www.figma.com/file/NbJg775aItjxvZ
 
 ## License
 
-Muuvies is © 2020, Nicholas Adamou.
+Muuvies is © Nicholas Adamou.
 
 It is free software, and may be redistributed under the terms specified in the [LICENSE] file.
 
