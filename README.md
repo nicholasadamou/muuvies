@@ -5,8 +5,6 @@
 A simple UI for searching [omdbapi.com/](https://www.omdbapi.com/)'s API.
 
 ![license](https://img.shields.io/apm/l/vim-mode.svg)
-[![DevDependencies](https://img.shields.io/david/dev/nicholasadamou/muuvies.svg?style=flat-square)](https://david-dm.org/nicholasadamou/muuvies#info=devDependencies)
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=nicholasadamou/muuvies)](https://dependabot.com)
 [![Say Thanks](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/NicholasAdamou)
 
 ## What is "Muuvies"?
