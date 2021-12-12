@@ -73,7 +73,7 @@ class Search extends Component {
 
 	search({ query }) {
 		fetch(
-			`http://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_API_KEY}&s=${query}&type=movie`
+			`https://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_API_KEY}&s=${query}&type=movie`
 		)
 			.then((res) => res.json())
 			.then((res) => {
