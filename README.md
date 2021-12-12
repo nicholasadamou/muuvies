@@ -1,4 +1,4 @@
-## Muuvies [![Build Status](https://travis-ci.org/nicholasadamou/muuvies.svg?branch=master)](https://travis-ci.org/nicholasadamou/muuvies)
+## Muuvies
 
 ![preview](previews/preview.gif)
 
